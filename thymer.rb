@@ -24,7 +24,7 @@ class Thymer
 
   def invoice(date, end_date = nil)
     start_date = Date.parse(date)
-    end_date ||= start_date + 13
+    end_date = end_date.nil? ? start_date + 13 : Date.parse(end_date)
 
     @variables[:date] ||= Time.now.to_english
     @variables[:start_date] = start_date.to_english
