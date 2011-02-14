@@ -70,13 +70,13 @@
             %br/
             = "#{regular_priced_seconds/3600.0}"
             %br/
-            = "$#{total_cost/3600.0}"
+            = "$#{(total_cost/36.0).round/100.0}"
       - else
         #total.grid_12
           .text
             Total:
             %br/
-            ="Units at $#{unit_rate}:"
+            ="Units at $#{(unit_rate*100.00).round/100.0}:"
             %br/
             Total cost:
 
@@ -86,6 +86,6 @@
             %br/
             = "#{total_seconds/3600.0}"
             %br/
-            = "$#{total_cost/3600.0}"
+            = "$#{(total_cost/36.0).round/100.0}"
 
 
